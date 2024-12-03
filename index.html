@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ACS Container Lines</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shotcut icon" href="Images/container.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <style>
+            @keyframes load {
+                from {
+                    transform: translateY(200px);
+                    opacity: 0.5;
+                }
+
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: #0A3981;
+                color: whitesmoke;
+                font-family: Nunito;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                overflow: hidden;
+                transition: all 0.5s ease-in-out;
+            }
+
+            .logo {
+                width: 120px; 
+                border-radius: 999px;
+                transition: all 0.5s ease-in-out;
+            }
+
+            .main-div {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                justify-content: center;
+                animation: load 0.5s cubic-bezier(0.42, 0, 0.59, 1.58);
+                margin-left: 20px;
+                margin-right: 20px;
+                transition: all 0.5s ease-in-out;
+            }
+
+            @media (max-width: 486px) {
+                .main-div {
+                    flex-direction: column;
+                }
+            }
+
+            @media (max-width: 360px) {
+                .main-div h1 {
+                    font-size: 1.75rem;
+                }
+            }
+        </style>
+    </head>
+    <bodys>
+        <div class="main-div">
+            <img class="logo" src="Images/ACS.png" draggable="false">
+            <h1>ACS Container Lines</h1>
+        </div>
+    </body>
+</html>
